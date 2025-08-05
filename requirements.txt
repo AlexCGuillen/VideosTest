@@ -7,3 +7,7 @@ click>=8.0.0
 Pillow>=9.0.0
 numpy>=1.21.0
 requests>=2.25.0
+
+# Optional dependencies for GUI and automated upload
+selenium>=4.0.0  # For automated TikTok uploads
+flask>=2.0.0     # For web-based GUI interface

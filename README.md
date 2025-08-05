@@ -4,13 +4,29 @@ Transform movies into AI-narrated short videos optimized for TikTok posting and 
 
 ## Features ✨
 
-- 🎥 **Smart Video Processing**: Automatically cuts movies into TikTok-optimized segments (9:16 aspect ratio)
-- 🤖 **AI Narration**: Generates engaging scripts using OpenAI GPT
-- 🔊 **Text-to-Speech**: Converts AI scripts to natural-sounding narration
-- 📱 **TikTok Ready**: Outputs videos in perfect TikTok format (1080x1920, 30fps)
-- 🎵 **Audio Mixing**: Balances original movie audio with AI narration
-- 📊 **Batch Processing**: Create multiple parts from a single movie
-- ⚙️ **Configurable**: Customize segment duration, narration style, and more
+### 🎥 Core Video Processing
+- **Smart Video Processing**: Automatically cuts movies into TikTok-optimized segments (9:16 aspect ratio)
+- **AI Narration**: Generates engaging scripts using OpenAI GPT
+- **Text-to-Speech**: Converts AI scripts to natural-sounding narration
+- **TikTok Ready**: Outputs videos in perfect TikTok format (1080x1920, 30fps)
+- **Audio Mixing**: Balances original movie audio with AI narration
+- **Batch Processing**: Create multiple parts from a single movie
+
+### 🖱️ User-Friendly Interface
+- **Simple GUI**: Easy-to-use graphical interface for non-technical users
+- **Command Line**: Advanced CLI for power users and automation
+- **Smart Launcher**: Interactive menu to choose your preferred interface
+
+### 🚀 TikTok Upload Integration
+- **Automated Upload**: Experimental browser automation for direct TikTok uploads
+- **Manual Upload Guide**: Step-by-step instructions for manual uploading
+- **Upload Checklist**: Automatically generated checklist with descriptions and hashtags
+- **Monetization Tips**: Built-in guidance for maximum engagement and revenue
+
+### ⚙️ Advanced Configuration
+- **Customizable Settings**: Adjust segment duration, narration style, video quality
+- **API Integration**: OpenAI GPT for dynamic content generation
+- **Graceful Fallbacks**: Works even with missing dependencies
 
 ## Quick Start 🚀
 
@@ -23,6 +39,9 @@ cd VideosTest
 
 # Install dependencies
 pip install -r requirements.txt
+
+# Optional: Install Selenium for automated uploads
+pip install selenium
 ```
 
 ### 2. Setup API Key (Optional but Recommended)
@@ -35,15 +54,116 @@ cp .env.example .env
 OPENAI_API_KEY=your_openai_api_key_here
 ```
 
-### 3. Generate TikTok Videos
+### 3. Choose Your Interface
 
+#### 🖱️ Easy GUI Mode (Recommended for Beginners)
+```bash
+# Launch the simple interface
+python launcher.py
+# Select option 1 for GUI mode
+```
+
+The GUI provides a user-friendly interface where you can:
+- Browse and select your input video file
+- Choose output directory
+- Adjust settings with sliders and checkboxes
+- Monitor progress in real-time
+- Optionally enable automatic TikTok uploads
+
+#### 💻 Command Line Mode (Advanced Users)
 ```bash
 # Basic usage
 python main.py movie.mp4
 
-# Advanced usage
+# Advanced usage with custom settings
 python main.py movie.mp4 --output-dir ./tiktok_videos --duration 30 --title "Amazing Movie"
+
+# Interactive CLI mode
+python launcher.py
+# Select option 2 for CLI mode
 ```
+
+#### 🚀 Quick Test
+```bash
+# Run demo to test your setup
+python quick_demo.py
+
+# Try the new UI features demo
+python ui_demo.py
+```
+
+### 🎯 Simple Start (New Users)
+
+If you're new to coding or just want the easiest way to get started:
+
+```bash
+# Download and install
+git clone https://github.com/AlexCGuillen/VideosTest.git
+cd VideosTest
+pip install -r requirements.txt
+
+# Launch the interactive interface
+python launcher.py
+```
+
+This will show you a menu to choose between:
+- **Web GUI** (works in any browser)
+- **Desktop GUI** (native desktop app) 
+- **Command Line** (for advanced users)
+- **Usage Examples** and **Upload Guide**
+
+## TikTok Upload Methods 📤
+
+Once your videos are generated, you have several options for uploading to TikTok:
+
+### 🤖 Automated Upload (Experimental)
+
+Enable automated uploads directly through the application:
+
+```bash
+# GUI Mode: Check "Automatically upload to TikTok" option
+python launcher.py
+
+# Or programmatically:
+from tiktok_uploader import TikTokUploader
+uploader = TikTokUploader()
+uploader.upload_video("video.mp4", "Description #fyp #viral")
+```
+
+**Features:**
+- Browser automation using Selenium
+- Batch upload multiple videos
+- Automatic descriptions and hashtags
+- Persistent login sessions
+
+**Requirements:**
+- Selenium: `pip install selenium`
+- Chrome browser installed
+- Manual login on first use
+
+### 📱 Manual Upload (Recommended)
+
+For maximum reliability and control:
+
+1. **Generate videos** using the GUI or CLI
+2. **Transfer to phone** via cloud storage, email, or USB
+3. **Follow the checklist** automatically created in your output folder
+4. **Upload to TikTok** using the mobile app
+
+The generator creates an `UPLOAD_CHECKLIST.txt` with:
+- ✅ Video file list
+- ✅ Suggested descriptions and hashtags
+- ✅ Step-by-step upload instructions
+- ✅ Monetization tips and strategies
+
+### 📖 Complete Upload Guide
+
+See [UPLOAD_GUIDE.md](UPLOAD_GUIDE.md) for comprehensive instructions including:
+- Detailed setup for automated uploads
+- Manual upload best practices
+- Troubleshooting common issues
+- Monetization strategies
+- TikTok API status and alternatives
 
 ## Usage Examples 📖
 
